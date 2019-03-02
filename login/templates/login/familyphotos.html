@@ -1,0 +1,16 @@
+{% extends 'login/base.html'%}
+{% block content%}
+{%load static%}
+<h1 class="h1"><center>Welcome to our Photo Gallery!!!</center></h1>
+<a href="{% url 'addImage'%}" class="images">Add Photo</a><br/>
+<a href="{% url 'back' pageno=2%}" class="images">Back</a>
+<br/>
+
+<img class="familyimages" src="{%static 'login/images/family.jpg'%}" height="500" width="600">
+<img class="familyimages" src="{%static 'login/images/family2.jpg'%}" height="500" width="600">
+<img class="familyimages" src="{%static 'login/images/family3.jpg'%}" height="500" width="600">
+{% for i in i1%}
+    <img class="familyimages" src="{{MEDIA_URL}}/{{i.Photo}}" height="500" width="600" >
+{% endfor %}
+
+{% endblock %}

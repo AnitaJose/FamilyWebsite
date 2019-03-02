@@ -1,0 +1,35 @@
+{% extends 'login/base.html' %}
+{% block content %}
+{% load static %}
+
+{% for user in users %}
+    <h1 class="h"><center>Hello {{user.Username}}</center></h1> <a href="{%url 'familyphotos'%}" class="images">Images</a>
+
+    <br/>
+
+{% endfor%}
+<h1 class="h1"><center>Welcome to Vadamattathil Karinattu!!!</center></h1>
+<a href="{% url 'login_page' %}" class="images">Logout</a>
+<br/><br/>
+
+
+<p class="p1">Our family known as Vadamattathil Karinattu is famous for their unity and love.Our great grandfather Mr Pothan Sir
+was the headmaster of vettikkal school.He was a well known person for his kindness and love.He had 13 kids of which 2 died in a
+very young age.His elder son ran away from the country to live in England, and married again.He died along with his kids in a
+house fire.Pothan Sir's second son(Joseph) who is our grandfather led the family after Pothan Sir.He was in the military during
+our freedom fight.</p>
+
+<center>
+<a class="names" href="{% url 'Willy'%}">Philip K Joseph</a><br/><br/>
+<a class="names" href="{% url 'Jose'%}">Jose K Joseph</a><br/><br/>
+<a class="names" href="{% url 'Rony'%}">Rony K Josph</a><br/><br/>
+<a class="names" href="{% url 'Jeny'%}">Jeny Joseph</a><br/><br/>
+<a class="names" href="{% url 'Elsamma'%}">Elsamma Joseph</a><br/><br/>
+</center>
+
+
+
+
+<center><img src="{%static 'login/images/family.jpg'%}" alt="family.jpg"/></center>
+
+{% endblock %}

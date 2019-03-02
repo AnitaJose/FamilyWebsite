@@ -1,0 +1,49 @@
+{%extends 'login/base.html'%}
+{% block content %}
+{% load static %}
+{{no|default:2}}
+{% for user in users %}
+    {{no|default:0}}
+{% endfor %}
+{% for family in family1 %}
+    <h1 class="h1"><center>Welcome to {{family.FamilyHead}} Family!!!</center></h1>
+<a href="{% url 'back' pageno=2 %}" class="images">Back</a><br/><br/>
+    <img class="im1" src="{{MEDIA_URL}}/{{family.Photo}}"  >
+    <h2 class="h2">{{family}}</h2>
+    <h2 class="h3">Date of Birth:  {{family.DOB}}</h2>
+<h2 class="h3">Email ID:  <a href="mailto:{{family.Email}}">{{family.Email}}</a></h2>
+<p class ="pjose">{{family.Description}}</p>
+{% endfor %}
+
+
+{% for family in family2 %}
+
+    <img class="im1" src="{{MEDIA_URL}}/{{family.Photo}}"  >
+    <h2 class="h2">{{family}}</h2>
+    <h2 class="h3">Date of Birth:  {{family.DOB}}</h2>
+    <h2 class="h3"> Email ID:  <a href="mailto:{{family.Email}}">{{family.Email}}</a></h2>
+    <p class ="pjose">{{family.Description}}</p>
+{% endfor %}
+
+
+{% for family in family3 %}
+
+    <img class="im1" src="{{MEDIA_URL}}/{{family.Photo}}"  >
+    <h2 class="h2">{{family}}</h2>
+    <h2 class="h3">Date of Birth:  {{family.DOB}}</h2>
+    <h2 class="h3">Email ID:  <a href="mailto:{{family.Email}}">{{family.Email}}</a></h2>
+    <p class ="pjose">{{family.Description}}</p>
+{% endfor %}
+
+{% for family in family4 %}
+
+    <img class="im1" src="{{MEDIA_URL}}/{{family.Photo}}"  >
+    <h2 class="h2">{{family}}</h2>
+    <h2 class="h3">Date of Birth:  {{family.DOB}}</h2>
+    <h2 class="h3">Email ID:  <a href="mailto:{{family.Email}}">{{family.Email}}</a></h2>
+    <p class ="pjose">{{family.Description}}</p>
+{% endfor %}
+
+
+
+{% endblock%}

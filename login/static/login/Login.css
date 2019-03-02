@@ -1,0 +1,65 @@
+
+.guest{
+}
+.p1{
+    padding-left: 60px;
+    font-size: 15px;
+}
+.pjose{
+    padding-left: 30px;
+    font-size: 15px;
+}
+.names{
+    font-size: x-large;
+}
+
+.login-form {
+    color: #5897fb;
+}
+
+.signup-form{
+    padding-left: 30px;
+    padding-right:30px;
+
+}
+
+.h1 {
+    color: #ba2121;
+}
+
+.h {
+    color: #a41515;
+}
+
+.bodypro {
+    background-color: #ddffdd;
+}
+.images{
+    padding-left: 1200px;
+    padding-right: 0px;
+    font-size: large;
+}
+.familyimages{
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.h2 {
+    color: blue;
+    font-size: xx-large;
+    padding-left: 20px;
+}
+
+.im1 {
+    padding-left: 30px;
+    height: 150px;
+    widows: initial;
+}
+
+.h3 {
+    color: #444444;
+    font-size: large;
+    padding-left: 20px;
+}

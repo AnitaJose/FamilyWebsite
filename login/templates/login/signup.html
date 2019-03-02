@@ -1,0 +1,15 @@
+{% extends 'login/base.html' %}
+{% block content %}
+
+<h1 class="h"><center>Please fill your Details</center></h1>
+<br />
+<br/>
+<form method="POST" class="signup-form">
+    {% csrf_token %}
+    {{form.as_p}}
+        <br/>
+    <button type="submit">Submit</button>
+</form>
+<br/>
+
+{% endblock %}
