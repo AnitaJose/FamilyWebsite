@@ -14,11 +14,38 @@ class AddPhotoForm(forms.ModelForm):
 
 class SignupForm(forms.Form):
 
-    FirstName = forms.CharField(max_length=30)
-    LastName = forms.CharField(max_length=30)
-    DateOfBirth = forms.DateField(label='Date of Birth')
-    EmailID = forms.EmailField()
-    PhoneNumber = forms.CharField(max_length=10)
-    Username = forms.CharField(max_length=20)
-    Password = forms.CharField(widget=forms.PasswordInput)
+    FirstName = forms.CharField(
+        max_length=30,
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter First Name'
+        }),
+    )
+    LastName = forms.CharField(
+        max_length=30,
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter Last Name'
+        }),
+    )
+    EmailID = forms.EmailField(
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter Email'
+        }),
+    )
+    Username = forms.CharField(
+        max_length=20,
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter Username'
+        }),
+    )
+    Password = forms.CharField(
+        widget=forms.PasswordInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter Password'
+        }
+            )
+    )
 

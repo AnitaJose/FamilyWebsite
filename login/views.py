@@ -31,14 +31,21 @@ def signup_page(request):
         form = SignupForm(request.POST)
         #signup1 = form.save(commit=False)
         if form.is_valid():
-            u = login(Username=form.cleaned_data['Username'], Password=form.cleaned_data['Password'])
+            u = login(
+                Username=form.cleaned_data['Username'],
+                Password=form.cleaned_data['Password']
+            )
             u.save()
             #login.objects.create(Username=form.cleaned_data['Username'], Password=form.cleaned_data['Password'])
             #u1 = login.objects.get(Username=form.cleaned_data['Username'])
-            a = signup(FirstName=form.cleaned_data['FirstName'],LastName=form.cleaned_data['LastName'],
-                       DOB=form.cleaned_data['DateOfBirth'],
-                       EmailID=form.cleaned_data['EmailID'],PhoneNumber=form.cleaned_data['PhoneNumber'],
-                       Username=u)
+            a = signup(
+                FirstName=form.cleaned_data['FirstName'],
+                LastName=form.cleaned_data['LastName'],
+                DOB=form.cleaned_data['DateOfBirth'],
+                EmailID=form.cleaned_data['EmailID'],
+                PhoneNumber=form.cleaned_data['PhoneNumber'],
+                Username=u
+            )
 
             a.save()
 
