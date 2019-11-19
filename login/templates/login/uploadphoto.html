@@ -2,7 +2,9 @@
 {% block content %}
 {% load static %}
 <h1><center>Please Upload Photo</center></h1>
-<a href="{% url 'back' pageno=3%}" class="images">Back</a>
+<div class="col-sm-offset-11 col-sm-4">
+    <a href="{% url 'back' pageno=3%}" class="btn btn-info">Back</a>
+</div>
 <br/><br/>
 <form method="POST" class="login-form" enctype="multipart/form-data">
     {% csrf_token %}

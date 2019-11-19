@@ -7,7 +7,9 @@
 {% endfor %}
 {% for family in family1 %}
     <h1 class="h1"><center>Welcome to {{family.FamilyHead}} Family!!!</center></h1>
-<a href="{% url 'back' pageno=2 %}" class="images">Back</a><br/><br/>
+    <div class="col-sm-offset-11 col-sm-4">
+        <a href="{% url 'back' pageno=2 %}" class="btn btn-info">Back</a><br/><br/>
+    </div>
     <img class="im1" src="{{MEDIA_URL}}/{{family.Photo}}"  >
     <h2 class="h2">{{family}}</h2>
     <h2 class="h3">Date of Birth:  {{family.DOB}}</h2>

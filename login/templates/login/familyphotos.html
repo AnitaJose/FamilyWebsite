@@ -3,7 +3,9 @@
 {%load static%}
 <h1 class="h1"><center>Welcome to our Photo Gallery!!!</center></h1>
 <a href="{% url 'addImage'%}" class="images">Add Photo</a><br/>
-<a href="{% url 'back' pageno=2%}" class="images">Back</a>
+<div class="col-sm-offset-11 col-sm-4">
+    <a href="{% url 'back' pageno=2%}" class="btn btn-info">Back</a>
+</div>
 <br/>
 
 <img class="familyimages" src="{%static 'login/images/family.jpg'%}" height="500" width="600">
